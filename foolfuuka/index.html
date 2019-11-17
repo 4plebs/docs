@@ -1,0 +1,466 @@
+<!DOCTYPE html><html lang="en-US"><head><meta charset="utf-8"/><title>4plebs.org API Documentation v0.0.3</title><meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no"/><link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet"/><link href="app-0d4869f7f9c37d37edfb.css" rel="stylesheet"/></head><body><div id="app-root"><div id="wrapper" data-reactroot="" data-reactid="1" data-react-checksum="-1989566124"><nav id="sidebar-wrapper" data-reactid="2"><div class="search" data-reactid="3"><input type="text" placeholder="Search..." value="" data-reactid="4"/></div><ul class="sidebar-nav" data-reactid="5"><li class="sidebar-category" data-reactid="6">Basic FoolFuuka</li><li class="" data-reactid="7"><a href="#basic-foolfuuka-return-post" data-reactid="8">Return post</a></li><li class="" data-reactid="9"><a href="#basic-foolfuuka-return-thread" data-reactid="10">Return thread</a></li><li class="" data-reactid="11"><a href="#basic-foolfuuka-return-board-index" data-reactid="12">Return board index</a></li><li class="" data-reactid="13"><a href="#basic-foolfuuka-search-function" data-reactid="14">Search function</a></li></ul><ul class="sidebar-nav" data-reactid="15"><li class="sidebar-category" data-reactid="16">4plebs specific</li><li class="" data-reactid="17"><a href="#4plebs-specific-site-information" data-reactid="18">Site information</a></li><li class="" data-reactid="19"><a href="#4plebs-specific-archives-information" data-reactid="20">Archives information</a></li><li class="" data-reactid="21"><a href="#4plebs-specific-boards-information" data-reactid="22">Boards information</a></li><li class="" data-reactid="23"><a href="#4plebs-specific-gallery" data-reactid="24">Gallery</a></li><li class="" data-reactid="25"><a href="#4plebs-specific-intel-share" data-reactid="26">Intel Share</a></li><li class="" data-reactid="27"><a href="#4plebs-specific-offsite-report" data-reactid="28">Offsite Report</a></li><li class="" data-reactid="29"><a href="#4plebs-specific-list-articles" data-reactid="30">List articles</a></li><li class="" data-reactid="31"><a href="#4plebs-specific-return-article" data-reactid="32">Return article</a></li><li class="" data-reactid="33"><a href="#4plebs-specific-list-board-statistics" data-reactid="34">List board statistics</a></li><li class="" data-reactid="35"><a href="#4plebs-specific-return-board-statistic-data" data-reactid="36">Return board statistic data</a></li><li class="" data-reactid="37"><a href="#4plebs-specific-" data-reactid="38"></a></li></ul></nav><div id="page-content-wrapper" data-reactid="39"><div class="container-fluid" data-reactid="40"><div class="row" data-reactid="41"><div class="col-lg-12" data-reactid="42"><h1 data-reactid="43">4plebs.org API Documentation v0.0.3</h1><article class="panel panel-primary" data-reactid="44"><div class="panel-heading" data-reactid="45"><div id="basic-foolfuuka" data-reactid="46"></div><h2 data-reactid="47">Basic FoolFuuka</h2></div><div class="panel-body" data-reactid="48"><h3 data-reactid="49"></h3><header id="basic-foolfuuka-properties" data-reactid="50"><p data-reactid="51"><a class="btn btn-info" data-reactid="52"><span data-reactid="53">Show</span><!-- react-text: 54 --> <!-- /react-text --><!-- react-text: 55 -->properties and constraints defined on the object<!-- /react-text --></a></p></header></div><div class="list-group" data-reactid="56"><section id="basic-foolfuuka-return-post" class="list-group-item" data-reactid="57"><h3 data-reactid="58"><div class="label label-success" data-reactid="59">GET</div><!-- react-text: 60 --> <!-- /react-text --><div class="endpoint-title" data-reactid="61">Return post</div></h3><div data-reactid="62"><p>Returns the post object</p>
+</div><pre data-reactid="63"><!-- react-text: 64 -->GET<!-- /react-text --><!-- react-text: 65 --> <!-- /react-text --><!-- react-text: 66 -->/post/<!-- /react-text --></pre><div data-reactid="67"><h4 data-reactid="68">Required parameters</h4><table class="table table-hover" data-reactid="69"><thead data-reactid="70"><tr data-reactid="71"><th data-reactid="72"><p data-reactid="73"><!-- react-text: 74 -->Name <!-- /react-text --><small data-reactid="75">/type</small></p></th><th data-reactid="76"><p data-reactid="77"><!-- react-text: 78 -->Description <!-- /react-text --><small data-reactid="79">/example</small></p></th><th data-reactid="80"><p data-reactid="81">Constraints</p></th></tr></thead><tbody data-reactid="82"><tr data-reactid="83"><td data-reactid="84"><p data-reactid="85"><strong data-reactid="86">board</strong><br data-reactid="87"/><small data-reactid="88"><em data-reactid="89">string</em></small></p></td><td data-reactid="90"><div data-reactid="91"><p>Board shortname</p>
+</div><div data-reactid="92"><small data-reactid="93"><code data-reactid="94">&quot;plebs&quot;</code></small></div></td><td data-reactid="95"><ul class="constraints" data-reactid="96"></ul></td></tr><tr data-reactid="97"><td data-reactid="98"><p data-reactid="99"><strong data-reactid="100">num</strong><br data-reactid="101"/><small data-reactid="102"><em data-reactid="103">number</em></small></p></td><td data-reactid="104"><div data-reactid="105"><p>Number of the post.</p>
+</div><div data-reactid="106"><small data-reactid="107"><code data-reactid="108">1</code></small></div></td><td data-reactid="109"><ul class="constraints" data-reactid="110"></ul></td></tr></tbody></table></div><h4 data-reactid="111">cURL</h4><div data-reactid="112"><pre data-reactid="113">curl -X GET &quot;http://archive.4plebs.org/_/api/chan/post/?board=plebs&amp;num=1&quot; \
+</pre></div><h4 data-reactid="114">Response</h4><div data-reactid="115"><pre data-reactid="116">{
+  &quot;doc_id&quot;: &quot;1&quot;,
+  &quot;num&quot;: &quot;1&quot;,
+  &quot;subnum&quot;: &quot;0&quot;,
+  &quot;thread_num&quot;: &quot;1&quot;,
+  &quot;op&quot;: &quot;1&quot;,
+  &quot;timestamp&quot;: &quot;1366825828&quot;,
+  &quot;timestamp_expired&quot;: &quot;0&quot;,
+  &quot;capcode&quot;: &quot;N&quot;,
+  &quot;email&quot;: null,
+  &quot;name&quot;: &quot;Anonymous&quot;,
+  &quot;trip&quot;: null,
+  &quot;title&quot;: null,
+  &quot;comment&quot;: &quot;4plebs?&quot;,
+  &quot;poster_hash&quot;: null,
+  &quot;poster_country&quot;: null,
+  &quot;sticky&quot;: &quot;0&quot;,
+  &quot;locked&quot;: &quot;0&quot;,
+  &quot;deleted&quot;: &quot;0&quot;,
+  &quot;nreplies&quot;: null,
+  &quot;nimages&quot;: null,
+  &quot;fourchan_date&quot;: &quot;4/24/13(Wed)13:50&quot;,
+  &quot;comment_sanitized&quot;: &quot;4plebs?&quot;,
+  &quot;comment_processed&quot;: &quot;4plebs?&quot;,
+  &quot;formatted&quot;: false,
+  &quot;title_processed&quot;: null,
+  &quot;name_processed&quot;: &quot;Anonymous&quot;,
+  &quot;email_processed&quot;: null,
+  &quot;trip_processed&quot;: null,
+  &quot;poster_hash_processed&quot;: null,
+  &quot;poster_country_name&quot;: false,
+  &quot;poster_country_name_processed&quot;: &quot;&quot;,
+  &quot;media&quot;: {
+    &quot;media_id&quot;: &quot;1&quot;,
+    &quot;spoiler&quot;: &quot;0&quot;,
+    &quot;preview_orig&quot;: &quot;13668258289537s.jpg&quot;,
+    &quot;media&quot;: &quot;13668215782696.jpg&quot;,
+    &quot;preview_op&quot;: &quot;13668258289537s.jpg&quot;,
+    &quot;preview_reply&quot;: null,
+    &quot;preview_w&quot;: &quot;209&quot;,
+    &quot;preview_h&quot;: &quot;250&quot;,
+    &quot;media_filename&quot;: &quot;feelcup.jpg&quot;,
+    &quot;media_w&quot;: &quot;645&quot;,
+    &quot;media_h&quot;: &quot;773&quot;,
+    &quot;media_size&quot;: &quot;51338&quot;,
+    &quot;media_hash&quot;: &quot;UGaaniyM723FBlG4b77z/w==&quot;,
+    &quot;media_orig&quot;: &quot;13668215782696.jpg&quot;,
+    &quot;exif&quot;: &quot;{\&quot;FileName\&quot;:\&quot;d4c564ed648381f49af029c9443de206.jpg\&quot;,\&quot;FileDateTime\&quot;:1366825827,\&quot;FileSize\&quot;:51338,\&quot;FileType\&quot;:2,\&quot;MimeType\&quot;:\&quot;image\\/jpeg\&quot;,\&quot;SectionsFound\&quot;:\&quot;\&quot;,\&quot;COMPUTED\&quot;:{\&quot;html\&quot;:\&quot;width=\\\&quot;645\\\&quot; height=\\\&quot;773\\\&quot;\&quot;,\&quot;Height\&quot;:773,\&quot;Width\&quot;:645,\&quot;IsColor\&quot;:1}}&quot;,
+    &quot;total&quot;: &quot;2&quot;,
+    &quot;banned&quot;: &quot;0&quot;,
+    &quot;media_status&quot;: &quot;normal&quot;,
+    &quot;safe_media_hash&quot;: &quot;UGaaniyM723FBlG4b77z_w&quot;,
+    &quot;remote_media_link&quot;: null,
+    &quot;media_link&quot;: &quot;http://img.4plebs.org/boards/plebs/image/1366/82/13668215782696.jpg&quot;,
+    &quot;thumb_link&quot;: &quot;http://img.4plebs.org/boards/plebs/thumb/1366/82/13668258289537s.jpg&quot;,
+    &quot;media_filename_processed&quot;: &quot;feelcup.jpg&quot;
+  },
+  &quot;board&quot;: {
+    &quot;name&quot;: &quot;4plebs discussion&quot;,
+    &quot;shortname&quot;: &quot;plebs&quot;
+  }
+}</pre></div></section><section id="basic-foolfuuka-return-thread" class="list-group-item" data-reactid="117"><h3 data-reactid="118"><div class="label label-success" data-reactid="119">GET</div><!-- react-text: 120 --> <!-- /react-text --><div class="endpoint-title" data-reactid="121">Return thread</div></h3><div data-reactid="122"><p>Returns the thread object</p>
+</div><pre data-reactid="123"><!-- react-text: 124 -->GET<!-- /react-text --><!-- react-text: 125 --> <!-- /react-text --><!-- react-text: 126 -->/thread/<!-- /react-text --></pre><div data-reactid="127"><h4 data-reactid="128">Required parameters</h4><table class="table table-hover" data-reactid="129"><thead data-reactid="130"><tr data-reactid="131"><th data-reactid="132"><p data-reactid="133"><!-- react-text: 134 -->Name <!-- /react-text --><small data-reactid="135">/type</small></p></th><th data-reactid="136"><p data-reactid="137"><!-- react-text: 138 -->Description <!-- /react-text --><small data-reactid="139">/example</small></p></th><th data-reactid="140"><p data-reactid="141">Constraints</p></th></tr></thead><tbody data-reactid="142"><tr data-reactid="143"><td data-reactid="144"><p data-reactid="145"><strong data-reactid="146">board</strong><br data-reactid="147"/><small data-reactid="148"><em data-reactid="149">string</em></small></p></td><td data-reactid="150"><div data-reactid="151"><p>Board shortname</p>
+</div><div data-reactid="152"><small data-reactid="153"><code data-reactid="154">&quot;plebs&quot;</code></small></div></td><td data-reactid="155"><ul class="constraints" data-reactid="156"></ul></td></tr><tr data-reactid="157"><td data-reactid="158"><p data-reactid="159"><strong data-reactid="160">num</strong><br data-reactid="161"/><small data-reactid="162"><em data-reactid="163">number</em></small></p></td><td data-reactid="164"><div data-reactid="165"><p>Number of the thread</p>
+</div><div data-reactid="166"><small data-reactid="167"><code data-reactid="168">1</code></small></div></td><td data-reactid="169"><ul class="constraints" data-reactid="170"></ul></td></tr></tbody></table></div><h4 data-reactid="171">cURL</h4><div data-reactid="172"><pre data-reactid="173">curl -X GET &quot;http://archive.4plebs.org/_/api/chan/thread/?board=plebs&amp;num=1&quot; \
+</pre></div><h4 data-reactid="174">Response</h4><div data-reactid="175"><pre data-reactid="176">{
+  &quot;1&quot;: {
+    &quot;op&quot;: {
+      // post object //
+    },
+    &quot;posts&quot;: {
+      &quot;1_7&quot;: {
+        // post object //
+      },
+      &quot;1_8&quot;: {
+        // post object //
+      }
+    }
+  }
+}</pre></div></section><section id="basic-foolfuuka-return-board-index" class="list-group-item" data-reactid="177"><h3 data-reactid="178"><div class="label label-success" data-reactid="179">GET</div><!-- react-text: 180 --> <!-- /react-text --><div class="endpoint-title" data-reactid="181">Return board index</div></h3><div data-reactid="182"><p>Returns the board index</p>
+</div><pre data-reactid="183"><!-- react-text: 184 -->GET<!-- /react-text --><!-- react-text: 185 --> <!-- /react-text --><!-- react-text: 186 -->/index/<!-- /react-text --></pre><div data-reactid="187"><h4 data-reactid="188">Required parameters</h4><table class="table table-hover" data-reactid="189"><thead data-reactid="190"><tr data-reactid="191"><th data-reactid="192"><p data-reactid="193"><!-- react-text: 194 -->Name <!-- /react-text --><small data-reactid="195">/type</small></p></th><th data-reactid="196"><p data-reactid="197"><!-- react-text: 198 -->Description <!-- /react-text --><small data-reactid="199">/example</small></p></th><th data-reactid="200"><p data-reactid="201">Constraints</p></th></tr></thead><tbody data-reactid="202"><tr data-reactid="203"><td data-reactid="204"><p data-reactid="205"><strong data-reactid="206">board</strong><br data-reactid="207"/><small data-reactid="208"><em data-reactid="209">string</em></small></p></td><td data-reactid="210"><div data-reactid="211"><p>Board shortname</p>
+</div><div data-reactid="212"><small data-reactid="213"><code data-reactid="214">&quot;plebs&quot;</code></small></div></td><td data-reactid="215"><ul class="constraints" data-reactid="216"></ul></td></tr><tr data-reactid="217"><td data-reactid="218"><p data-reactid="219"><strong data-reactid="220">page</strong><br data-reactid="221"/><small data-reactid="222"><em data-reactid="223">number</em></small></p></td><td data-reactid="224"><div data-reactid="225"><p>Page number</p>
+</div><div data-reactid="226"><small data-reactid="227"><code data-reactid="228">1</code></small></div></td><td data-reactid="229"><ul class="constraints" data-reactid="230"></ul></td></tr></tbody></table></div><div data-reactid="231"><h4 data-reactid="232">Optional parameters</h4><table class="table table-hover" data-reactid="233"><thead data-reactid="234"><tr data-reactid="235"><th data-reactid="236"><p data-reactid="237"><!-- react-text: 238 -->Name <!-- /react-text --><small data-reactid="239">/type</small></p></th><th data-reactid="240"><p data-reactid="241"><!-- react-text: 242 -->Description <!-- /react-text --><small data-reactid="243">/example</small></p></th><th data-reactid="244"><p data-reactid="245">Constraints</p></th></tr></thead><tbody data-reactid="246"><tr data-reactid="247"><td data-reactid="248"><p data-reactid="249"><strong data-reactid="250">order</strong><br data-reactid="251"/><small data-reactid="252"><em data-reactid="253">string</em></small></p></td><td data-reactid="254"><div data-reactid="255"><p>Page order</p>
+</div><div data-reactid="256"><small data-reactid="257"><code data-reactid="258">&quot;by_thread&quot;</code></small></div></td><td data-reactid="259"><ul class="constraints" data-reactid="260"><li data-reactid="261">default value: by_thread</li><li data-reactid="262"><!-- react-text: 263 -->valid values: <!-- /react-text --><!-- react-text: 264 -->by_post, by_thread, ghost<!-- /react-text --></li></ul></td></tr></tbody></table></div><h4 data-reactid="265">cURL</h4><div data-reactid="266"><pre data-reactid="267">curl -X GET &quot;http://archive.4plebs.org/_/api/chan/index/?board=plebs&amp;page=1&amp;order=by_thread&quot; \
+</pre></div><h4 data-reactid="268">Response</h4><div data-reactid="269"><pre data-reactid="270">{
+  &quot;1145&quot;: {
+    &quot;omitted&quot;: 0,
+    &quot;images_omitted&quot;: 0,
+    &quot;op&quot;: {
+      // post object //
+    },
+    &quot;posts&quot;: [
+      // post objects //
+    ]
+  },
+  &quot;1148&quot;: {
+    &quot;omitted&quot;: 0,
+    &quot;images_omitted&quot;: 0,
+    &quot;op&quot;: {
+      // post object //
+    },
+    &quot;posts&quot;: [
+      // post objects //
+    ]
+  },
+  // ... //
+}</pre></div></section><section id="basic-foolfuuka-search-function" class="list-group-item" data-reactid="271"><h3 data-reactid="272"><div class="label label-success" data-reactid="273">GET</div><!-- react-text: 274 --> <!-- /react-text --><div class="endpoint-title" data-reactid="275">Search function</div></h3><div data-reactid="276"><p>Returns search results. Search API is limited to 5 requests per minute. Other end points aren&#39;t limited.</p>
+</div><pre data-reactid="277"><!-- react-text: 278 -->GET<!-- /react-text --><!-- react-text: 279 --> <!-- /react-text --><!-- react-text: 280 -->/search/<!-- /react-text --></pre><div data-reactid="281"><h4 data-reactid="282">Optional parameters</h4><table class="table table-hover" data-reactid="283"><thead data-reactid="284"><tr data-reactid="285"><th data-reactid="286"><p data-reactid="287"><!-- react-text: 288 -->Name <!-- /react-text --><small data-reactid="289">/type</small></p></th><th data-reactid="290"><p data-reactid="291"><!-- react-text: 292 -->Description <!-- /react-text --><small data-reactid="293">/example</small></p></th><th data-reactid="294"><p data-reactid="295">Constraints</p></th></tr></thead><tbody data-reactid="296"><tr data-reactid="297"><td data-reactid="298"><p data-reactid="299"><strong data-reactid="300">start</strong><br data-reactid="301"/><small data-reactid="302"><em data-reactid="303">string</em></small></p></td><td data-reactid="304"><div data-reactid="305"><p>Start date. Format: YYYY-MM-DD.</p>
+</div><div data-reactid="306"><small data-reactid="307"><code data-reactid="308">&quot;&quot;</code></small></div></td><td data-reactid="309"><ul class="constraints" data-reactid="310"></ul></td></tr><tr data-reactid="311"><td data-reactid="312"><p data-reactid="313"><strong data-reactid="314">filename</strong><br data-reactid="315"/><small data-reactid="316"><em data-reactid="317">string</em></small></p></td><td data-reactid="318"><!-- react-text: 319 --><!-- /react-text --><div data-reactid="320"><small data-reactid="321"><code data-reactid="322">&quot;&quot;</code></small></div></td><td data-reactid="323"><ul class="constraints" data-reactid="324"></ul></td></tr><tr data-reactid="325"><td data-reactid="326"><p data-reactid="327"><strong data-reactid="328">subject</strong><br data-reactid="329"/><small data-reactid="330"><em data-reactid="331">string</em></small></p></td><td data-reactid="332"><!-- react-text: 333 --><!-- /react-text --><div data-reactid="334"><small data-reactid="335"><code data-reactid="336">&quot;&quot;</code></small></div></td><td data-reactid="337"><ul class="constraints" data-reactid="338"></ul></td></tr><tr data-reactid="339"><td data-reactid="340"><p data-reactid="341"><strong data-reactid="342">text</strong><br data-reactid="343"/><small data-reactid="344"><em data-reactid="345">string</em></small></p></td><td data-reactid="346"><!-- react-text: 347 --><!-- /react-text --><div data-reactid="348"><small data-reactid="349"><code data-reactid="350">&quot;&quot;</code></small></div></td><td data-reactid="351"><ul class="constraints" data-reactid="352"></ul></td></tr><tr data-reactid="353"><td data-reactid="354"><p data-reactid="355"><strong data-reactid="356">boards</strong><br data-reactid="357"/><small data-reactid="358"><em data-reactid="359">string</em></small></p></td><td data-reactid="360"><div data-reactid="361"><p>Board shortname. Dot delimiter for multiple.</p>
+</div><div data-reactid="362"><small data-reactid="363"><code data-reactid="364">&quot;adv.trv&quot;</code></small></div></td><td data-reactid="365"><ul class="constraints" data-reactid="366"></ul></td></tr><tr data-reactid="367"><td data-reactid="368"><p data-reactid="369"><strong data-reactid="370">order</strong><br data-reactid="371"/><small data-reactid="372"><em data-reactid="373">string</em></small></p></td><td data-reactid="374"><div data-reactid="375"><p>Order of posts.</p>
+</div><div data-reactid="376"><small data-reactid="377"><code data-reactid="378">&quot;asc&quot;</code></small></div></td><td data-reactid="379"><ul class="constraints" data-reactid="380"><li data-reactid="381">default value: desc</li><li data-reactid="382"><!-- react-text: 383 -->valid values: <!-- /react-text --><!-- react-text: 384 -->asc, desc<!-- /react-text --></li></ul></td></tr><tr data-reactid="385"><td data-reactid="386"><p data-reactid="387"><strong data-reactid="388">ghost</strong><br data-reactid="389"/><small data-reactid="390"><em data-reactid="391">string</em></small></p></td><td data-reactid="392"><div data-reactid="393"><p>Ghost posts.</p>
+</div><div data-reactid="394"><small data-reactid="395"><code data-reactid="396">&quot;none&quot;</code></small></div></td><td data-reactid="397"><ul class="constraints" data-reactid="398"><li data-reactid="399"><!-- react-text: 400 -->valid values: <!-- /react-text --><!-- react-text: 401 -->only, none<!-- /react-text --></li></ul></td></tr><tr data-reactid="402"><td data-reactid="403"><p data-reactid="404"><strong data-reactid="405">uid</strong><br data-reactid="406"/><small data-reactid="407"><em data-reactid="408">string</em></small></p></td><td data-reactid="409"><!-- react-text: 410 --><!-- /react-text --><div data-reactid="411"><small data-reactid="412"><code data-reactid="413">&quot;&quot;</code></small></div></td><td data-reactid="414"><ul class="constraints" data-reactid="415"></ul></td></tr><tr data-reactid="416"><td data-reactid="417"><p data-reactid="418"><strong data-reactid="419">tripcode</strong><br data-reactid="420"/><small data-reactid="421"><em data-reactid="422">string</em></small></p></td><td data-reactid="423"><!-- react-text: 424 --><!-- /react-text --><div data-reactid="425"><small data-reactid="426"><code data-reactid="427">&quot;&quot;</code></small></div></td><td data-reactid="428"><ul class="constraints" data-reactid="429"></ul></td></tr><tr data-reactid="430"><td data-reactid="431"><p data-reactid="432"><strong data-reactid="433">username</strong><br data-reactid="434"/><small data-reactid="435"><em data-reactid="436">string</em></small></p></td><td data-reactid="437"><!-- react-text: 438 --><!-- /react-text --><div data-reactid="439"><small data-reactid="440"><code data-reactid="441">&quot;&quot;</code></small></div></td><td data-reactid="442"><ul class="constraints" data-reactid="443"></ul></td></tr><tr data-reactid="444"><td data-reactid="445"><p data-reactid="446"><strong data-reactid="447">country</strong><br data-reactid="448"/><small data-reactid="449"><em data-reactid="450">string</em></small></p></td><td data-reactid="451"><!-- react-text: 452 --><!-- /react-text --><div data-reactid="453"><small data-reactid="454"><code data-reactid="455">&quot;&quot;</code></small></div></td><td data-reactid="456"><ul class="constraints" data-reactid="457"></ul></td></tr><tr data-reactid="458"><td data-reactid="459"><p data-reactid="460"><strong data-reactid="461">results</strong><br data-reactid="462"/><small data-reactid="463"><em data-reactid="464">string</em></small></p></td><td data-reactid="465"><div data-reactid="466"><p>Results grouped by thread or none.</p>
+</div><div data-reactid="467"><small data-reactid="468"><code data-reactid="469">&quot;&quot;</code></small></div></td><td data-reactid="470"><ul class="constraints" data-reactid="471"><li data-reactid="472"><!-- react-text: 473 -->valid values: <!-- /react-text --><!-- react-text: 474 -->thread<!-- /react-text --></li></ul></td></tr><tr data-reactid="475"><td data-reactid="476"><p data-reactid="477"><strong data-reactid="478">filter</strong><br data-reactid="479"/><small data-reactid="480"><em data-reactid="481">string</em></small></p></td><td data-reactid="482"><div data-reactid="483"><p>Filter.</p>
+</div><div data-reactid="484"><small data-reactid="485"><code data-reactid="486">&quot;image&quot;</code></small></div></td><td data-reactid="487"><ul class="constraints" data-reactid="488"><li data-reactid="489"><!-- react-text: 490 -->valid values: <!-- /react-text --><!-- react-text: 491 -->image, text<!-- /react-text --></li></ul></td></tr><tr data-reactid="492"><td data-reactid="493"><p data-reactid="494"><strong data-reactid="495">deleted</strong><br data-reactid="496"/><small data-reactid="497"><em data-reactid="498">string</em></small></p></td><td data-reactid="499"><div data-reactid="500"><p>Deleted or not.</p>
+</div><div data-reactid="501"><small data-reactid="502"><code data-reactid="503">&quot;not-deleted&quot;</code></small></div></td><td data-reactid="504"><ul class="constraints" data-reactid="505"><li data-reactid="506"><!-- react-text: 507 -->valid values: <!-- /react-text --><!-- react-text: 508 -->deleted, not-deleted<!-- /react-text --></li></ul></td></tr><tr data-reactid="509"><td data-reactid="510"><p data-reactid="511"><strong data-reactid="512">type</strong><br data-reactid="513"/><small data-reactid="514"><em data-reactid="515">string</em></small></p></td><td data-reactid="516"><div data-reactid="517"><p>Post type.</p>
+</div><div data-reactid="518"><small data-reactid="519"><code data-reactid="520">&quot;posts&quot;</code></small></div></td><td data-reactid="521"><ul class="constraints" data-reactid="522"><li data-reactid="523"><!-- react-text: 524 -->valid values: <!-- /react-text --><!-- react-text: 525 -->sticky, op, posts<!-- /react-text --></li></ul></td></tr><tr data-reactid="526"><td data-reactid="527"><p data-reactid="528"><strong data-reactid="529">end</strong><br data-reactid="530"/><small data-reactid="531"><em data-reactid="532">string</em></small></p></td><td data-reactid="533"><div data-reactid="534"><p>End date. Format: YYYY-MM-DD.</p>
+</div><div data-reactid="535"><small data-reactid="536"><code data-reactid="537">&quot;&quot;</code></small></div></td><td data-reactid="538"><ul class="constraints" data-reactid="539"></ul></td></tr><tr data-reactid="540"><td data-reactid="541"><p data-reactid="542"><strong data-reactid="543">image</strong><br data-reactid="544"/><small data-reactid="545"><em data-reactid="546">string</em></small></p></td><td data-reactid="547"><div data-reactid="548"><p>Base64 encoded md5 hash of media file.</p>
+</div><div data-reactid="549"><small data-reactid="550"><code data-reactid="551">&quot;&quot;</code></small></div></td><td data-reactid="552"><ul class="constraints" data-reactid="553"></ul></td></tr><tr data-reactid="554"><td data-reactid="555"><p data-reactid="556"><strong data-reactid="557">email</strong><br data-reactid="558"/><small data-reactid="559"><em data-reactid="560">string</em></small></p></td><td data-reactid="561"><!-- react-text: 562 --><!-- /react-text --><div data-reactid="563"><small data-reactid="564"><code data-reactid="565">&quot;&quot;</code></small></div></td><td data-reactid="566"><ul class="constraints" data-reactid="567"></ul></td></tr><tr data-reactid="568"><td data-reactid="569"><p data-reactid="570"><strong data-reactid="571">capcode</strong><br data-reactid="572"/><small data-reactid="573"><em data-reactid="574">string</em></small></p></td><td data-reactid="575"><div data-reactid="576"><p>Capcode.</p>
+</div><div data-reactid="577"><small data-reactid="578"><code data-reactid="579">&quot;user&quot;</code></small></div></td><td data-reactid="580"><ul class="constraints" data-reactid="581"><li data-reactid="582">default value: user</li><li data-reactid="583"><!-- react-text: 584 -->valid values: <!-- /react-text --><!-- react-text: 585 -->user, ver, mod, dev, admin, manager, founder<!-- /react-text --></li></ul></td></tr></tbody></table></div><h4 data-reactid="586">cURL</h4><div data-reactid="587"><pre data-reactid="588">curl -X GET &quot;http://archive.4plebs.org/_/api/chan/search/?boards=adv.trv&amp;email=&amp;username=&amp;tripcode=&amp;capcode=user&amp;subject=&amp;text=&amp;uid=&amp;country=&amp;filename=&amp;image=&amp;deleted=not-deleted&amp;ghost=none&amp;filter=image&amp;type=posts&amp;start=&amp;end=&amp;results=&amp;order=asc&quot; \
+</pre></div><h4 data-reactid="589">Response</h4><div data-reactid="590"><pre data-reactid="591">{
+  &quot;0&quot;: {
+    &quot;posts&quot;: [
+      {
+        // post object //
+      },
+      {
+        // post object //
+      },
+      // ... //
+    ]
+  },
+  &quot;meta&quot;: {
+    &quot;total_found&quot;: 3681872,
+    &quot;max_results&quot;: 5000,
+    &quot;search_title&quot;: &quot;Searching for posts that has not been deleted and that are not by ghosts and that are only non-OP posts and that do not contain images and that were made by users and in ascending order.&quot;
+  }
+}</pre></div></section></div></article><article class="panel panel-primary" data-reactid="592"><div class="panel-heading" data-reactid="593"><div id="4plebs-specific" data-reactid="594"></div><h2 data-reactid="595">4plebs specific</h2></div><div class="panel-body" data-reactid="596"><h3 data-reactid="597"></h3><header id="4plebs-specific-properties" data-reactid="598"><p data-reactid="599"><a class="btn btn-info" data-reactid="600"><span data-reactid="601">Show</span><!-- react-text: 602 --> <!-- /react-text --><!-- react-text: 603 -->properties and constraints defined on the object<!-- /react-text --></a></p></header></div><div class="list-group" data-reactid="604"><section id="4plebs-specific-site-information" class="list-group-item" data-reactid="605"><h3 data-reactid="606"><div class="label label-success" data-reactid="607">GET</div><!-- react-text: 608 --> <!-- /react-text --><div class="endpoint-title" data-reactid="609">Site information</div></h3><div data-reactid="610"><p>Returns site information, archives and boards</p>
+</div><pre data-reactid="611"><!-- react-text: 612 -->GET<!-- /react-text --><!-- react-text: 613 --> <!-- /react-text --><!-- react-text: 614 -->/site/<!-- /react-text --></pre><h4 data-reactid="615">cURL</h4><div data-reactid="616"><pre data-reactid="617">curl -X GET &quot;http://archive.4plebs.org/_/api/chan/site/&quot; \
+</pre></div><h4 data-reactid="618">Response</h4><div data-reactid="619"><pre data-reactid="620">{
+  &quot;site&quot;: {
+    &quot;url&quot;: &quot;http://archive.4plebs.org/&quot;,
+    &quot;name&quot;: &quot;4plebs&quot;,
+    &quot;title&quot;: &quot;4plebs&quot;,
+    &quot;notices&quot;: null,
+    &quot;media_http&quot;: [
+      &quot;http://img.4plebs.org/boards&quot;
+    ],
+    &quot;media_https&quot;: [
+      &quot;https://img.4plebs.org/boards&quot;
+    ],
+    &quot;global_search_enabled&quot;: true
+  },
+  &quot;archives&quot;: {
+    &quot;10&quot;: {
+      &quot;name&quot;: &quot;Advice&quot;,
+      &quot;shortname&quot;: &quot;adv&quot;,
+      &quot;board_url&quot;: &quot;http://archive.4plebs.org/adv/&quot;,
+      &quot;threads_per_page&quot;: &quot;10&quot;,
+      &quot;original_board_url&quot;: &quot;http://boards.4chan.org/adv/&quot;,
+      &quot;thumbs_url&quot;: &quot;&quot;,
+      &quot;images_url&quot;: &quot;&quot;,
+      &quot;anonymous_default_name&quot;: &quot;Anonymous&quot;,
+      &quot;max_comment_characters_allowed&quot;: &quot;4096&quot;,
+      &quot;max_comment_lines_allowed&quot;: &quot;20&quot;,
+      &quot;cooldown_new_comment&quot;: &quot;10&quot;,
+      &quot;transparent_spoiler&quot;: true,
+      &quot;enable_flags&quot;: false,
+      &quot;display_exif&quot;: false,
+      &quot;enable_poster_hash&quot;: false,
+      &quot;disable_ghost&quot;: false,
+      &quot;is_nsfw&quot;: false,
+      &quot;hide_thumbnails&quot;: false,
+      &quot;search_enabled&quot;: true,
+      &quot;board_hidden&quot;: false,
+      &quot;archive_full_images&quot;: true
+    },
+    // ... //
+  },
+  &quot;boards&quot;: {
+    &quot;1&quot;: {
+      &quot;name&quot;: &quot;4plebs discussion&quot;,
+      &quot;shortname&quot;: &quot;plebs&quot;,
+      &quot;board_url&quot;: &quot;http://archive.4plebs.org/plebs/&quot;,
+      &quot;threads_per_page&quot;: &quot;10&quot;,
+      &quot;original_board_url&quot;: &quot;http://archive.4plebs.org/plebs/&quot;,
+      &quot;thumbs_url&quot;: &quot;&quot;,
+      &quot;images_url&quot;: &quot;&quot;,
+      &quot;anonymous_default_name&quot;: &quot;Anonymous&quot;,
+      &quot;max_comment_characters_allowed&quot;: &quot;4096&quot;,
+      &quot;max_comment_lines_allowed&quot;: &quot;20&quot;,
+      &quot;cooldown_new_comment&quot;: &quot;30&quot;,
+      &quot;transparent_spoiler&quot;: true,
+      &quot;enable_flags&quot;: false,
+      &quot;display_exif&quot;: false,
+      &quot;enable_poster_hash&quot;: false,
+      &quot;disable_ghost&quot;: false,
+      &quot;is_nsfw&quot;: false,
+      &quot;hide_thumbnails&quot;: false,
+      &quot;search_enabled&quot;: false,
+      &quot;board_hidden&quot;: false,
+      &quot;internal_board_settings&quot;: {
+        &quot;op_image_upload_necessity&quot;: &quot;always&quot;,
+        &quot;thumbnail_op_width&quot;: &quot;250&quot;,
+        &quot;thumbnail_op_height&quot;: &quot;250&quot;,
+        &quot;thumbnail_reply_width&quot;: &quot;125&quot;,
+        &quot;thumbnail_reply_height&quot;: &quot;125&quot;,
+        &quot;max_image_size_kilobytes&quot;: &quot;10240&quot;,
+        &quot;max_image_size_width&quot;: &quot;11000&quot;,
+        &quot;max_image_size_height&quot;: &quot;11000&quot;,
+        &quot;max_posts_count&quot;: &quot;400&quot;,
+        &quot;max_images_count&quot;: &quot;250&quot;,
+        &quot;cooldown_new_thread&quot;: &quot;300&quot;,
+        &quot;thread_lifetime&quot;: &quot;1728000&quot;,
+        &quot;min_image_repost_time&quot;: &quot;1&quot;
+      }
+    }
+  }
+}</pre></div></section><section id="4plebs-specific-archives-information" class="list-group-item" data-reactid="621"><h3 data-reactid="622"><div class="label label-success" data-reactid="623">GET</div><!-- react-text: 624 --> <!-- /react-text --><div class="endpoint-title" data-reactid="625">Archives information</div></h3><div data-reactid="626"><p>Returns site information and archives</p>
+</div><pre data-reactid="627"><!-- react-text: 628 -->GET<!-- /react-text --><!-- react-text: 629 --> <!-- /react-text --><!-- react-text: 630 -->/archives/<!-- /react-text --></pre><h4 data-reactid="631">cURL</h4><div data-reactid="632"><pre data-reactid="633">curl -X GET &quot;http://archive.4plebs.org/_/api/chan/archives/&quot; \
+</pre></div><h4 data-reactid="634">Response</h4><div data-reactid="635"><pre data-reactid="636">{
+  &quot;site&quot;: {
+    &quot;url&quot;: &quot;http://archive.4plebs.org/&quot;,
+    &quot;name&quot;: &quot;4plebs&quot;,
+    &quot;title&quot;: &quot;4plebs&quot;,
+    &quot;notices&quot;: null,
+    &quot;media_http&quot;: [
+      &quot;http://img.4plebs.org/boards&quot;
+    ],
+    &quot;media_https&quot;: [
+      &quot;https://img.4plebs.org/boards&quot;
+    ],
+    &quot;global_search_enabled&quot;: true
+  },
+  &quot;archives&quot;: {
+    &quot;10&quot;: {
+      &quot;name&quot;: &quot;Advice&quot;,
+      &quot;shortname&quot;: &quot;adv&quot;,
+      &quot;board_url&quot;: &quot;http://archive.4plebs.org/adv/&quot;,
+      &quot;threads_per_page&quot;: &quot;10&quot;,
+      &quot;original_board_url&quot;: &quot;http://boards.4chan.org/adv/&quot;,
+      &quot;thumbs_url&quot;: &quot;&quot;,
+      &quot;images_url&quot;: &quot;&quot;,
+      &quot;anonymous_default_name&quot;: &quot;Anonymous&quot;,
+      &quot;max_comment_characters_allowed&quot;: &quot;4096&quot;,
+      &quot;max_comment_lines_allowed&quot;: &quot;20&quot;,
+      &quot;cooldown_new_comment&quot;: &quot;10&quot;,
+      &quot;transparent_spoiler&quot;: true,
+      &quot;enable_flags&quot;: false,
+      &quot;display_exif&quot;: false,
+      &quot;enable_poster_hash&quot;: false,
+      &quot;disable_ghost&quot;: false,
+      &quot;is_nsfw&quot;: false,
+      &quot;hide_thumbnails&quot;: false,
+      &quot;search_enabled&quot;: true,
+      &quot;board_hidden&quot;: false,
+      &quot;archive_full_images&quot;: true
+    },
+    // ... //
+  }
+}</pre></div></section><section id="4plebs-specific-boards-information" class="list-group-item" data-reactid="637"><h3 data-reactid="638"><div class="label label-success" data-reactid="639">GET</div><!-- react-text: 640 --> <!-- /react-text --><div class="endpoint-title" data-reactid="641">Boards information</div></h3><div data-reactid="642"><p>Returns site information and boards</p>
+</div><pre data-reactid="643"><!-- react-text: 644 -->GET<!-- /react-text --><!-- react-text: 645 --> <!-- /react-text --><!-- react-text: 646 -->/boards/<!-- /react-text --></pre><h4 data-reactid="647">cURL</h4><div data-reactid="648"><pre data-reactid="649">curl -X GET &quot;http://archive.4plebs.org/_/api/chan/boards/&quot; \
+</pre></div><h4 data-reactid="650">Response</h4><div data-reactid="651"><pre data-reactid="652">{
+  &quot;site&quot;: {
+    &quot;url&quot;: &quot;http://archive.4plebs.org/&quot;,
+    &quot;name&quot;: &quot;4plebs&quot;,
+    &quot;title&quot;: &quot;4plebs&quot;,
+    &quot;notices&quot;: null,
+    &quot;media_http&quot;: [
+      &quot;http://img.4plebs.org/boards&quot;
+    ],
+    &quot;media_https&quot;: [
+      &quot;https://img.4plebs.org/boards&quot;
+    ],
+    &quot;global_search_enabled&quot;: true
+  },
+  &quot;boards&quot;: {
+    &quot;1&quot;: {
+      &quot;name&quot;: &quot;4plebs discussion&quot;,
+      &quot;shortname&quot;: &quot;plebs&quot;,
+      &quot;board_url&quot;: &quot;http://archive.4plebs.org/plebs/&quot;,
+      &quot;threads_per_page&quot;: &quot;10&quot;,
+      &quot;original_board_url&quot;: &quot;http://archive.4plebs.org/plebs/&quot;,
+      &quot;thumbs_url&quot;: &quot;&quot;,
+      &quot;images_url&quot;: &quot;&quot;,
+      &quot;anonymous_default_name&quot;: &quot;Anonymous&quot;,
+      &quot;max_comment_characters_allowed&quot;: &quot;4096&quot;,
+      &quot;max_comment_lines_allowed&quot;: &quot;20&quot;,
+      &quot;cooldown_new_comment&quot;: &quot;30&quot;,
+      &quot;transparent_spoiler&quot;: true,
+      &quot;enable_flags&quot;: false,
+      &quot;display_exif&quot;: false,
+      &quot;enable_poster_hash&quot;: false,
+      &quot;disable_ghost&quot;: false,
+      &quot;is_nsfw&quot;: false,
+      &quot;hide_thumbnails&quot;: false,
+      &quot;search_enabled&quot;: false,
+      &quot;board_hidden&quot;: false,
+      &quot;internal_board_settings&quot;: {
+        &quot;op_image_upload_necessity&quot;: &quot;always&quot;,
+        &quot;thumbnail_op_width&quot;: &quot;250&quot;,
+        &quot;thumbnail_op_height&quot;: &quot;250&quot;,
+        &quot;thumbnail_reply_width&quot;: &quot;125&quot;,
+        &quot;thumbnail_reply_height&quot;: &quot;125&quot;,
+        &quot;max_image_size_kilobytes&quot;: &quot;10240&quot;,
+        &quot;max_image_size_width&quot;: &quot;11000&quot;,
+        &quot;max_image_size_height&quot;: &quot;11000&quot;,
+        &quot;max_posts_count&quot;: &quot;400&quot;,
+        &quot;max_images_count&quot;: &quot;250&quot;,
+        &quot;cooldown_new_thread&quot;: &quot;300&quot;,
+        &quot;thread_lifetime&quot;: &quot;1728000&quot;,
+        &quot;min_image_repost_time&quot;: &quot;1&quot;
+      }
+    }
+  }
+}</pre></div></section><section id="4plebs-specific-gallery" class="list-group-item" data-reactid="653"><h3 data-reactid="654"><div class="label label-success" data-reactid="655">GET</div><!-- react-text: 656 --> <!-- /react-text --><div class="endpoint-title" data-reactid="657">Gallery</div></h3><div data-reactid="658"><p>Returns gallery of a board (100 latest threads)</p>
+</div><pre data-reactid="659"><!-- react-text: 660 -->GET<!-- /react-text --><!-- react-text: 661 --> <!-- /react-text --><!-- react-text: 662 -->/gallery/<!-- /react-text --></pre><div data-reactid="663"><h4 data-reactid="664">Required parameters</h4><table class="table table-hover" data-reactid="665"><thead data-reactid="666"><tr data-reactid="667"><th data-reactid="668"><p data-reactid="669"><!-- react-text: 670 -->Name <!-- /react-text --><small data-reactid="671">/type</small></p></th><th data-reactid="672"><p data-reactid="673"><!-- react-text: 674 -->Description <!-- /react-text --><small data-reactid="675">/example</small></p></th><th data-reactid="676"><p data-reactid="677">Constraints</p></th></tr></thead><tbody data-reactid="678"><tr data-reactid="679"><td data-reactid="680"><p data-reactid="681"><strong data-reactid="682">board</strong><br data-reactid="683"/><small data-reactid="684"><em data-reactid="685">string</em></small></p></td><td data-reactid="686"><div data-reactid="687"><p>Board shortname</p>
+</div><div data-reactid="688"><small data-reactid="689"><code data-reactid="690">&quot;plebs&quot;</code></small></div></td><td data-reactid="691"><ul class="constraints" data-reactid="692"></ul></td></tr><tr data-reactid="693"><td data-reactid="694"><p data-reactid="695"><strong data-reactid="696">page</strong><br data-reactid="697"/><small data-reactid="698"><em data-reactid="699">number</em></small></p></td><td data-reactid="700"><div data-reactid="701"><p>Page number</p>
+</div><div data-reactid="702"><small data-reactid="703"><code data-reactid="704">1</code></small></div></td><td data-reactid="705"><ul class="constraints" data-reactid="706"></ul></td></tr></tbody></table></div><h4 data-reactid="707">cURL</h4><div data-reactid="708"><pre data-reactid="709">curl -X GET &quot;http://archive.4plebs.org/_/api/chan/gallery/?board=plebs&amp;page=1&quot; \
+</pre></div><h4 data-reactid="710">Response</h4><div data-reactid="711"><pre data-reactid="712">{
+  &quot;0&quot;: {
+    // post object //
+  },
+  &quot;1&quot;: {
+    // post object //
+  },
+  // ... //
+}</pre></div></section><section id="4plebs-specific-intel-share" class="list-group-item" data-reactid="713"><h3 data-reactid="714"><div class="label label-success" data-reactid="715">GET</div><!-- react-text: 716 --> <!-- /react-text --><div class="endpoint-title" data-reactid="717">Intel Share</div></h3><div data-reactid="718"><p>Returns globally banned media hashes. 100 results per page.</p>
+</div><pre data-reactid="719"><!-- react-text: 720 -->GET<!-- /react-text --><!-- react-text: 721 --> <!-- /react-text --><!-- react-text: 722 -->/intel/<!-- /react-text --></pre><div data-reactid="723"><h4 data-reactid="724">Required parameters</h4><table class="table table-hover" data-reactid="725"><thead data-reactid="726"><tr data-reactid="727"><th data-reactid="728"><p data-reactid="729"><!-- react-text: 730 -->Name <!-- /react-text --><small data-reactid="731">/type</small></p></th><th data-reactid="732"><p data-reactid="733"><!-- react-text: 734 -->Description <!-- /react-text --><small data-reactid="735">/example</small></p></th><th data-reactid="736"><p data-reactid="737">Constraints</p></th></tr></thead><tbody data-reactid="738"><tr data-reactid="739"><td data-reactid="740"><p data-reactid="741"><strong data-reactid="742">page</strong><br data-reactid="743"/><small data-reactid="744"><em data-reactid="745">number</em></small></p></td><td data-reactid="746"><div data-reactid="747"><p>Page number</p>
+</div><div data-reactid="748"><small data-reactid="749"><code data-reactid="750">1</code></small></div></td><td data-reactid="751"><ul class="constraints" data-reactid="752"></ul></td></tr></tbody></table></div><h4 data-reactid="753">cURL</h4><div data-reactid="754"><pre data-reactid="755">curl -X GET &quot;http://archive.4plebs.org/_/api/chan/intel/?page=1&quot; \
+</pre></div><h4 data-reactid="756">Response</h4><div data-reactid="757"><pre data-reactid="758">{
+  &quot;banned_hashes&quot;: [
+    &quot;//8lBubUDXXu8XPzr/GB1Q==&quot;,
+    &quot;/4h1xkGAwghktHzaxvBHFg==&quot;,
+    &quot;/4p9mjR58I3FtJGa2wkUkQ==&quot;,
+    // ... //
+  ],
+  &quot;total_count&quot;: &quot;745&quot;
+}</pre></div></section><section id="4plebs-specific-offsite-report" class="list-group-item" data-reactid="759"><h3 data-reactid="760"><div class="label label-success" data-reactid="761">POST</div><!-- react-text: 762 --> <!-- /react-text --><div class="endpoint-title" data-reactid="763">Offsite Report</div></h3><div data-reactid="764"><p>Used for POSTing reports. This will accept request data with multipart/form-data, application/x-www-form-urlencoded or application/json.</p>
+</div><pre data-reactid="765"><!-- react-text: 766 -->POST<!-- /react-text --><!-- react-text: 767 --> <!-- /react-text --><!-- react-text: 768 -->/offsite_report/<!-- /react-text --></pre><div data-reactid="769"><h4 data-reactid="770">Required parameters</h4><table class="table table-hover" data-reactid="771"><thead data-reactid="772"><tr data-reactid="773"><th data-reactid="774"><p data-reactid="775"><!-- react-text: 776 -->Name <!-- /react-text --><small data-reactid="777">/type</small></p></th><th data-reactid="778"><p data-reactid="779"><!-- react-text: 780 -->Description <!-- /react-text --><small data-reactid="781">/example</small></p></th><th data-reactid="782"><p data-reactid="783">Constraints</p></th></tr></thead><tbody data-reactid="784"><tr data-reactid="785"><td data-reactid="786"><p data-reactid="787"><strong data-reactid="788">board</strong><br data-reactid="789"/><small data-reactid="790"><em data-reactid="791">string</em></small></p></td><td data-reactid="792"><div data-reactid="793"><p>Board shortname</p>
+</div><div data-reactid="794"><small data-reactid="795"><code data-reactid="796">&quot;plebs&quot;</code></small></div></td><td data-reactid="797"><ul class="constraints" data-reactid="798"></ul></td></tr><tr data-reactid="799"><td data-reactid="800"><p data-reactid="801"><strong data-reactid="802">num</strong><br data-reactid="803"/><small data-reactid="804"><em data-reactid="805">number</em></small></p></td><td data-reactid="806"><div data-reactid="807"><p>Number of the post. This can have _ or , to indicate ghost posts.</p>
+</div><div data-reactid="808"><small data-reactid="809"><code data-reactid="810">1</code></small></div></td><td data-reactid="811"><ul class="constraints" data-reactid="812"></ul></td></tr><tr data-reactid="813"><td data-reactid="814"><p data-reactid="815"><strong data-reactid="816">reason</strong><br data-reactid="817"/><small data-reactid="818"><em data-reactid="819">string</em></small></p></td><td data-reactid="820"><div data-reactid="821"><p>Reason of the report</p>
+</div><div data-reactid="822"><small data-reactid="823"><code data-reactid="824">&quot;report reason&quot;</code></small></div></td><td data-reactid="825"><ul class="constraints" data-reactid="826"></ul></td></tr></tbody></table></div><div data-reactid="827"><h4 data-reactid="828">Optional parameters</h4><table class="table table-hover" data-reactid="829"><thead data-reactid="830"><tr data-reactid="831"><th data-reactid="832"><p data-reactid="833"><!-- react-text: 834 -->Name <!-- /react-text --><small data-reactid="835">/type</small></p></th><th data-reactid="836"><p data-reactid="837"><!-- react-text: 838 -->Description <!-- /react-text --><small data-reactid="839">/example</small></p></th><th data-reactid="840"><p data-reactid="841">Constraints</p></th></tr></thead><tbody data-reactid="842"><tr data-reactid="843"><td data-reactid="844"><p data-reactid="845"><strong data-reactid="846">access_key</strong><br data-reactid="847"/><small data-reactid="848"><em data-reactid="849">string</em></small></p></td><td data-reactid="850"><div data-reactid="851"><p>Access key given by the admins. This is now only used for setting source IP manually.</p>
+</div><div data-reactid="852"><small data-reactid="853"><code data-reactid="854">&quot;3d86f29c97c98aaca59fd538f19bb532&quot;</code></small></div></td><td data-reactid="855"><ul class="constraints" data-reactid="856"></ul></td></tr><tr data-reactid="857"><td data-reactid="858"><p data-reactid="859"><strong data-reactid="860">ip</strong><br data-reactid="861"/><small data-reactid="862"><em data-reactid="863">string</em></small></p></td><td data-reactid="864"><div data-reactid="865"><p>IP of the reporting client. If not set the calling IP will be used.</p>
+</div><div data-reactid="866"><small data-reactid="867"><code data-reactid="868">&quot;10.10.10.10&quot;</code></small></div></td><td data-reactid="869"><ul class="constraints" data-reactid="870"></ul></td></tr></tbody></table></div><h4 data-reactid="871">cURL</h4><div data-reactid="872"><pre data-reactid="873">curl -X POST &quot;http://archive.4plebs.org/_/api/chan/offsite_report/&quot; \
+     -H &quot;Content-Type: application/json&quot; \
+     --data &#x27;{&quot;access_key&quot;:&quot;3d86f29c97c98aaca59fd538f19bb532&quot;,&quot;board&quot;:&quot;plebs&quot;,&quot;num&quot;:1,&quot;reason&quot;:&quot;report reason&quot;,&quot;ip&quot;:&quot;10.10.10.10&quot;}&#x27;</pre></div><h4 data-reactid="874">Response</h4><div data-reactid="875"><pre data-reactid="876">{
+  &quot;success&quot;: &quot;You have successfully submitted a report for this post.&quot;
+}</pre></div></section><section id="4plebs-specific-list-articles" class="list-group-item" data-reactid="877"><h3 data-reactid="878"><div class="label label-success" data-reactid="879">GET</div><!-- react-text: 880 --> <!-- /react-text --><div class="endpoint-title" data-reactid="881">List articles</div></h3><div data-reactid="882"><p>Returns all articles.</p>
+</div><pre data-reactid="883"><!-- react-text: 884 -->GET<!-- /react-text --><!-- react-text: 885 --> <!-- /react-text --><!-- react-text: 886 -->/articles/<!-- /react-text --></pre><h4 data-reactid="887">cURL</h4><div data-reactid="888"><pre data-reactid="889">curl -X GET &quot;http://archive.4plebs.org/_/api/chan/articles/&quot; \
+</pre></div><h4 data-reactid="890">Response</h4><div data-reactid="891"><pre data-reactid="892">{
+  &quot;0&quot;: {
+    &quot;id&quot;: &quot;2&quot;,
+    &quot;slug&quot;: &quot;credits&quot;,
+    &quot;title&quot;: &quot;Credits &amp; Links&quot;,
+    &quot;url&quot;: &quot;&quot;,
+    &quot;content&quot;: &quot;##Credits\r\nUpdated on Feb 24 2017.   \r\n...&quot;,
+    &quot;hidden&quot;: &quot;0&quot;,
+    &quot;top&quot;: &quot;0&quot;,
+    &quot;bottom&quot;: &quot;1&quot;,
+    &quot;timestamp&quot;: &quot;1487959596&quot;
+  },
+  &quot;1&quot;: {
+    &quot;id&quot;: &quot;1&quot;,
+    &quot;slug&quot;: &quot;faq&quot;,
+    &quot;title&quot;: &quot;FAQ&quot;,
+    &quot;url&quot;: &quot;&quot;,
+    &quot;content&quot;: &quot;# Frequently asked questions\r\nLast updated on Sep 3 2016.\r\n...&quot;,
+    &quot;hidden&quot;: &quot;0&quot;,
+    &quot;top&quot;: &quot;0&quot;,
+    &quot;bottom&quot;: &quot;1&quot;,
+    &quot;timestamp&quot;: &quot;1476812698&quot;
+  },
+  &quot;2&quot;: {
+    &quot;id&quot;: &quot;4&quot;,
+    &quot;slug&quot;: &quot;status&quot;,
+    &quot;title&quot;: &quot;Status&quot;,
+    &quot;url&quot;: &quot;http://status.4plebs.org/&quot;,
+    &quot;content&quot;: &quot;&quot;,
+    &quot;hidden&quot;: &quot;0&quot;,
+    &quot;top&quot;: &quot;0&quot;,
+    &quot;bottom&quot;: &quot;1&quot;,
+    &quot;timestamp&quot;: &quot;1426596785&quot;
+  },
+  &quot;3&quot;: {
+    &quot;id&quot;: &quot;5&quot;,
+    &quot;slug&quot;: &quot;transparency&quot;,
+    &quot;title&quot;: &quot;Transparency&quot;,
+    &quot;url&quot;: &quot;&quot;,
+    &quot;content&quot;: &quot;&lt;h3&gt;Transparency&lt;/h3&gt;\r\n&lt;p&gt;Limited ...&quot;,
+    &quot;hidden&quot;: &quot;0&quot;,
+    &quot;top&quot;: &quot;0&quot;,
+    &quot;bottom&quot;: &quot;0&quot;,
+    &quot;timestamp&quot;: &quot;1447098253&quot;
+  },
+  &quot;4&quot;: {
+    &quot;id&quot;: &quot;3&quot;,
+    &quot;slug&quot;: &quot;twitter&quot;,
+    &quot;title&quot;: &quot;Twitter&quot;,
+    &quot;url&quot;: &quot;https://twitter.com/4plebs&quot;,
+    &quot;content&quot;: &quot;&quot;,
+    &quot;hidden&quot;: &quot;0&quot;,
+    &quot;top&quot;: &quot;0&quot;,
+    &quot;bottom&quot;: &quot;1&quot;,
+    &quot;timestamp&quot;: &quot;1426596754&quot;
+  }
+}</pre></div></section><section id="4plebs-specific-return-article" class="list-group-item" data-reactid="893"><h3 data-reactid="894"><div class="label label-success" data-reactid="895">GET</div><!-- react-text: 896 --> <!-- /react-text --><div class="endpoint-title" data-reactid="897">Return article</div></h3><div data-reactid="898"><p>Return one article. Raw markdown in content_raw and formatted html in content_formatted.</p>
+</div><pre data-reactid="899"><!-- react-text: 900 -->GET<!-- /react-text --><!-- react-text: 901 --> <!-- /react-text --><!-- react-text: 902 -->/articles/<!-- /react-text --></pre><div data-reactid="903"><h4 data-reactid="904">Required parameters</h4><table class="table table-hover" data-reactid="905"><thead data-reactid="906"><tr data-reactid="907"><th data-reactid="908"><p data-reactid="909"><!-- react-text: 910 -->Name <!-- /react-text --><small data-reactid="911">/type</small></p></th><th data-reactid="912"><p data-reactid="913"><!-- react-text: 914 -->Description <!-- /react-text --><small data-reactid="915">/example</small></p></th><th data-reactid="916"><p data-reactid="917">Constraints</p></th></tr></thead><tbody data-reactid="918"><tr data-reactid="919"><td data-reactid="920"><p data-reactid="921"><strong data-reactid="922">slug</strong><br data-reactid="923"/><small data-reactid="924"><em data-reactid="925">string</em></small></p></td><td data-reactid="926"><div data-reactid="927"><p>Slug of the article</p>
+</div><div data-reactid="928"><small data-reactid="929"><code data-reactid="930">&quot;faq&quot;</code></small></div></td><td data-reactid="931"><ul class="constraints" data-reactid="932"></ul></td></tr></tbody></table></div><h4 data-reactid="933">cURL</h4><div data-reactid="934"><pre data-reactid="935">curl -X GET &quot;http://archive.4plebs.org/_/api/chan/articles/?slug=faq&quot; \
+</pre></div><h4 data-reactid="936">Response</h4><div data-reactid="937"><pre data-reactid="938">{
+  &quot;id&quot;: &quot;1&quot;,
+  &quot;slug&quot;: &quot;faq&quot;,
+  &quot;title&quot;: &quot;FAQ&quot;,
+  &quot;url&quot;: &quot;&quot;,
+  &quot;content_raw&quot;: &quot;# Frequently asked questions\r\nLast updated on Sep 3 2016.\r\n\r\n### ...&quot;,
+  &quot;content_formatted&quot;: &quot;&lt;h1&gt;Frequently asked questions&lt;/h1&gt;\n\n&lt;p&gt;Last updated on Sep 3 2016...&quot;,
+  &quot;hidden&quot;: &quot;0&quot;,
+  &quot;top&quot;: &quot;0&quot;,
+  &quot;bottom&quot;: &quot;1&quot;,
+  &quot;timestamp&quot;: &quot;1476812698&quot;
+}</pre></div></section><section id="4plebs-specific-list-board-statistics" class="list-group-item" data-reactid="939"><h3 data-reactid="940"><div class="label label-success" data-reactid="941">GET</div><!-- react-text: 942 --> <!-- /react-text --><div class="endpoint-title" data-reactid="943">List board statistics</div></h3><div data-reactid="944"><p>Returns all enabled board statistics.</p>
+</div><pre data-reactid="945"><!-- react-text: 946 -->GET<!-- /react-text --><!-- react-text: 947 --> <!-- /react-text --><!-- react-text: 948 -->/statistics/<!-- /react-text --></pre><h4 data-reactid="949">cURL</h4><div data-reactid="950"><pre data-reactid="951">curl -X GET &quot;http://archive.4plebs.org/_/api/chan/statistics/&quot; \
+</pre></div><h4 data-reactid="952">Response</h4><div data-reactid="953"><pre data-reactid="954">{
+  &quot;enabled_statistics&quot;: [
+    {
+      &quot;activity&quot;: &quot;Activity&quot;
+    },
+    {
+      &quot;countries&quot;: &quot;Countries&quot;
+    },
+    {
+      &quot;image-reposts&quot;: &quot;Image Reposts&quot;
+    },
+    {
+      &quot;lthreads&quot;: &quot;Largest Threads&quot;
+    },
+    {
+      &quot;new-users&quot;: &quot;New Users&quot;
+    },
+    {
+      &quot;population&quot;: &quot;Population&quot;
+    },
+    {
+      &quot;post-count&quot;: &quot;Post Count&quot;
+    },
+    {
+      &quot;post-rate&quot;: &quot;Post Rate&quot;
+    },
+    {
+      &quot;users-online&quot;: &quot;Users Online&quot;
+    }
+  ]
+}</pre></div></section><section id="4plebs-specific-return-board-statistic-data" class="list-group-item" data-reactid="955"><h3 data-reactid="956"><div class="label label-success" data-reactid="957">GET</div><!-- react-text: 958 --> <!-- /react-text --><div class="endpoint-title" data-reactid="959">Return board statistic data</div></h3><div data-reactid="960"><p>Returns data of selected statistic. Timestamp omitted when statistic generated on request.</p>
+</div><pre data-reactid="961"><!-- react-text: 962 -->GET<!-- /react-text --><!-- react-text: 963 --> <!-- /react-text --><!-- react-text: 964 -->/statistics/<!-- /react-text --></pre><div data-reactid="965"><h4 data-reactid="966">Required parameters</h4><table class="table table-hover" data-reactid="967"><thead data-reactid="968"><tr data-reactid="969"><th data-reactid="970"><p data-reactid="971"><!-- react-text: 972 -->Name <!-- /react-text --><small data-reactid="973">/type</small></p></th><th data-reactid="974"><p data-reactid="975"><!-- react-text: 976 -->Description <!-- /react-text --><small data-reactid="977">/example</small></p></th><th data-reactid="978"><p data-reactid="979">Constraints</p></th></tr></thead><tbody data-reactid="980"><tr data-reactid="981"><td data-reactid="982"><p data-reactid="983"><strong data-reactid="984">board</strong><br data-reactid="985"/><small data-reactid="986"><em data-reactid="987">string</em></small></p></td><td data-reactid="988"><div data-reactid="989"><p>Board short name.</p>
+</div><div data-reactid="990"><small data-reactid="991"><code data-reactid="992">&quot;adv&quot;</code></small></div></td><td data-reactid="993"><ul class="constraints" data-reactid="994"></ul></td></tr><tr data-reactid="995"><td data-reactid="996"><p data-reactid="997"><strong data-reactid="998">stat</strong><br data-reactid="999"/><small data-reactid="1000"><em data-reactid="1001">string</em></small></p></td><td data-reactid="1002"><div data-reactid="1003"><p>Statistic identifier.</p>
+</div><div data-reactid="1004"><small data-reactid="1005"><code data-reactid="1006">&quot;activity&quot;</code></small></div></td><td data-reactid="1007"><ul class="constraints" data-reactid="1008"></ul></td></tr></tbody></table></div><h4 data-reactid="1009">cURL</h4><div data-reactid="1010"><pre data-reactid="1011">curl -X GET &quot;http://archive.4plebs.org/_/api/chan/statistics/?board=adv&amp;stat=activity&quot; \
+</pre></div><h4 data-reactid="1012">Response</h4><div data-reactid="1013"><pre data-reactid="1014">{
+  &quot;statistic&quot;: {
+    &quot;name&quot;: &quot;Activity&quot;,
+    &quot;timestamp&quot;: &quot;1488379998&quot;
+  },
+  &quot;data&quot;: &quot;...&quot;
+}</pre></div></section><section id="4plebs-specific-" class="list-group-item" data-reactid="1015"><h3 data-reactid="1016"><div class="label label-success" data-reactid="1017"></div><!-- react-text: 1018 --> <!-- /react-text --><div class="endpoint-title" data-reactid="1019"></div></h3><!-- react-text: 1020 --><!-- /react-text --></section></div></article></div></div></div></div></div></div><script src="app-0d4869f7f9c37d37edfb.js" type="text/javascript"></script></body></html>
